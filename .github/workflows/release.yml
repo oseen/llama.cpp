@@ -515,7 +515,7 @@ jobs:
 
     strategy:
       matrix:
-        gpu_target: [gfx1100, gfx1101, gfx1030]
+        gpu_target: [gfx1035]
 
     steps:
       - name: Clone
@@ -655,14 +655,7 @@ jobs:
     runs-on: ubuntu-latest
 
     needs:
-      - ubuntu-22-cpu
-      - ubuntu-22-vulkan
-      - windows
-      - windows-cuda
-      - windows-sycl
       - windows-hip
-      - macOS-arm64
-      - macOS-x64
 
     steps:
       - name: Clone
